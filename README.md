@@ -216,3 +216,31 @@ mkdir -p ~/Games/{DS,GBA,GBC,GB,GENESIS,NES,SNES}
 
 Once the folders exist, place the correct ROMs in each folder. The script will automatically detect the games in these directories.
 
+---
+
+7. Install the Rofi Theme
+
+This retro games launcher uses a custom Rofi theme stored seperately so your global Rofi config remains untouched.
+
+7a. Create the theme directory
+
+```html
+mkdir -p ~/.config/rofi/game-theme
+```
+7b. Download the theme file from this repo (ethanlabs101.rasi)
+
+7c. Copy the theme file to correct directory for script
+
+```html
+cp ethanlabs101.rasi ~/.config/rofi/game-theme/
+```
+7d. Download the theme background image from this repo (ethanlabs101.png)
+
+7e. Copy the background image to correct directory
+
+```html
+sudo cp ethanlabs101.png /usr/share/rofi/themes/
+```
+---
+
+8. Box Arts
