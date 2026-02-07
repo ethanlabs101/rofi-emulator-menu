@@ -55,5 +55,5 @@ Fedora
 sudo dnf install rofi
 ```
 
->> Note: If your rofi build does not support icons box art will not show, please download the most recent version for best user experience.
+> Note: If your rofi build does not support icons box art will not show, please download the most recent version for best user experience.
 
