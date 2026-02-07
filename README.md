@@ -195,3 +195,24 @@ flatpak install flathub io.mgba.mGBA
 ---
 
 6. Organize Game ROMs
+
+This launcher expects games to be stored in the ~/Games directory with a correctly named folder for each system. 
+Create the folders like this:
+
+```html
+mkdir -p ~/Games
+```
+
+```html
+mkdir -p ~/Games/{DS,GBA,GBC,GB,GENESIS,NES,SNES}
+```
+- DS -> Nintendo DS ROMs (.nds)
+- GBA -> Game Boy Advance ROMs (.gba)
+- GBC -> Game Boy Color ROMs (.gbc)
+- GB -> Game Boy ROMs (.gb)
+- GENESIS -> Sega Genesis ROMs (.bin/.gen)
+- NES -> Nintendo Entertainment System ROMs (.nes)
+- SNES -> Super Nintendo ROMs (.smc/.sfc)
+
+Once the folders exist, place the correct ROMs in each folder. The script will automatically detect the games in these directories.
+
