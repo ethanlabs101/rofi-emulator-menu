@@ -257,3 +257,24 @@ mkdir -p ~/.cache/rofi-game-icons
 8c. Add your box art images to this directory (Make sure to follow step 8a!)
 
 > The launcher will automatically detect icons in this folder when displaying the menu.
+
+---
+
+9. First Launch and Testing
+
+Once all steps have been followed thoroughly run the command: retro-games
+
+- The retro games menu should appear with the custom theme.
+- Navigate with arrow keys or search for a game.
+- The selected game will display a dark grey background behind the selected entry.
+- Selecting a game should launch it with the correct emulator.
+
+---
+
+Troubleshooting
+
+- Menu appears empty: Check that your ~/Games directory exists and contains correct folders and ROMs
+- Icons missing: make sure box are images are in ~/.cache/rofi-game-icons and named exactly like ROM file (Minus game extension)
+- Emulator not launching: verify the emulators are install with the command: which emulator (example: which fceux)
+
+> Once confirmed , consider adding a keybind to your WM or DE to launch the menu instantly, or type retro-games in terminal for easy access.
