@@ -157,7 +157,7 @@ sudo pacman -S snes9x fceux desmume retroarch
 ```
 
 ```html
-sudo pacman -S retroarch libretro-genesis-plus-gx
+sudo pacman -S libretro-genesis-plus-gx
 ```
 
 ```html
