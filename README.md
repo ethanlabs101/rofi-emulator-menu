@@ -297,6 +297,8 @@ sudo cp -r ethanlabs101.png /usr/share/rofi/themes/
 ```
 > Background Customization Complete!
 
+---
+
 Add new emulators
 
 1. Install new emulator
@@ -315,6 +317,8 @@ nano ~/.local/bin/retro-games
 Example:
 - Current: ["NES"]="$HOME/Games/NES:fceux:nes"
 - New: ["3DS"]="$HOME/Games/3DS:citra:3ds"
+
+---
 
 Change text color
 1. Open ethanlabs101.rasi theme file
