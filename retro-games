@@ -1,0 +1,71 @@
+#!/bin/bash
+
+# Retro systems: folder and emulator
+declare -A SYSTEMS
+SYSTEMS=(
+    ["SNES"]="$HOME/Games/SNES:snes9x:sfc,smc"
+    ["NES"]="$HOME/Games/NES:fceux:nes"
+    ["DS"]="$HOME/Games/DS:desmume:nds"
+    ["GBA"]="$HOME/Games/GBA:flatpak run io.mgba.mGBA:gba"
+    ["GBC"]="$HOME/Games/GBC:flatpak run io.mgba.mGBA:gbc"
+    ["GB"]="$HOME/Games/GB:flatpak run io.mgba.mGBA:gb"
+    ["GENESIS"]="$HOME/Games/GENESIS:retroarch -L /usr/lib/libretro/genesis_plus_gx_libretro.so:gen,bin,md"
+)
+
+# Icon folder
+ICON_DIR="$HOME/.cache/rofi-game-icons"
+
+entries=""
+
+# Supported icon extensions (priority order)
+ICON_EXTS=(avif png jpeg jpg)
+
+# Build entries for all systems
+for system in "${!SYSTEMS[@]}"; do
+    IFS=":" read -r rom_dir emulator exts <<< "${SYSTEMS[$system]}"
+    for ext in ${exts//,/ }; do
+        for rom in "$rom_dir"/*.$ext; do
+            [ -e "$rom" ] || continue
+
+            name=$(basename "$rom")
+            base="${name%.*}"
+
+            # Find first matching icon
+            icon=""
+            for iext in "${ICON_EXTS[@]}"; do
+                if [[ -f "$ICON_DIR/$base.$iext" ]]; then
+                    icon="$ICON_DIR/$base.$iext"
+                    break
+                fi
+            done
+
+            # Add entry (icon optional)
+            if [[ -n "$icon" ]]; then
+                entries+="$system - $name\0icon\x1f$icon\n"
+            else
+                entries+="$system - $name\n"
+            fi
+        done
+    done
+done
+
+# Launches custom theme
+ROFI_THEME="${ROFI_THEME:-/$HOME/.config/rofi/game-theme/ethanlabs101.rasi}"
+
+# Show unified menu
+selected=$(printf "%b" "$entries" | rofi -dmenu -theme "$ROFI_THEME" -p "Retro Games" -show-icons)
+[ -z "$selected" ] && exit
+
+# Parse system and game name
+system_name="${selected%% - *}"
+game_name="${selected#* - }"
+
+# Find full ROM path
+IFS=":" read -r rom_dir emulator exts <<< "${SYSTEMS[$system_name]}"
+for ext in ${exts//,/ }; do
+    for rom in "$rom_dir"/*.$ext; do
+        if [[ "$(basename "$rom")" == "$game_name" ]]; then
+            exec $emulator "$rom"
+        fi
+    done
+done
