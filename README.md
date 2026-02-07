@@ -316,6 +316,12 @@ Example:
 - Current: ["NES"]="$HOME/Games/NES:fceux:nes"
 - New: ["3DS"]="$HOME/Games/3DS:citra:3ds"
 
+Change text color
+1. Open ethanlabs101.rasi theme file
+2. Edit line 12 where it says text-color: #00FEFC;
+3. Replace with color names (example: red) or hex color codes (example: #ff0000)
+4. Save and Exit
+
 ---
 
 ## 📜 License
