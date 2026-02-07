@@ -89,7 +89,7 @@ If you see ~/.local/bin skip to step 4 if not, continue step 3.
 
 3a. Add the following snippet to your shell to fix PATH
 
-Bash
+If your shell is Bash use:
 
 ```html
 nano ~/.bashrc
@@ -100,7 +100,7 @@ Then paste this at the end of the file
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
-Zsh
+If your shell is Zsh use:
 
 ```html
 nano ~/.zshrc
