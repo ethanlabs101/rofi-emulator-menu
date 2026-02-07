@@ -318,6 +318,8 @@ Example:
 - Current: ["NES"]="$HOME/Games/NES:fceux:nes"
 - New: ["3DS"]="$HOME/Games/3DS:citra:3ds"
 
+4. Save and exit
+
 ---
 
 Change text color
