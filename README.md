@@ -119,7 +119,7 @@ source ~/.zshrc
 
 4. Install Flathub (If already installed skip to step 5)
 
-This retro gaming rofi launcher currently utilizes flatpak for mGBA so it can run GBA, GBC and GB. If you dont want to use any of these systems feel free to skip ahead and if not please follow along. Also, emulators are configurable see the ![modifications](https://github.com/ethanlabs101/rofi-emulator-menu?tab=readme-ov-file#modification--customization) section at the end of this ReadME on how to add or change emulators to your configs. 
+This retro gaming rofi launcher currently utilizes flatpak for mGBA so it can run GBA, GBC and GB. If you dont want to use any of these systems feel free to skip ahead and if not please follow along. Also, emulators are configurable see the [modifications](https://github.com/ethanlabs101/rofi-emulator-menu?tab=readme-ov-file#modification--customization) section at the end of this ReadME on how to add or change emulators to your configs. 
 
 Arch
 
