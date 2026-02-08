@@ -17,34 +17,16 @@ ICON_DIR="$HOME/.cache/rofi-game-icons"
 
 entries=""
 
-# Supported icon extensions (priority order)
-ICON_EXTS=(avif png jpeg jpg)
-
 # Build entries for all systems
 for system in "${!SYSTEMS[@]}"; do
     IFS=":" read -r rom_dir emulator exts <<< "${SYSTEMS[$system]}"
     for ext in ${exts//,/ }; do
         for rom in "$rom_dir"/*.$ext; do
             [ -e "$rom" ] || continue
-
             name=$(basename "$rom")
             base="${name%.*}"
-
-            # Find first matching icon
-            icon=""
-            for iext in "${ICON_EXTS[@]}"; do
-                if [[ -f "$ICON_DIR/$base.$iext" ]]; then
-                    icon="$ICON_DIR/$base.$iext"
-                    break
-                fi
-            done
-
-            # Add entry (icon optional)
-            if [[ -n "$icon" ]]; then
-                entries+="$system - $name\0icon\x1f$icon\n"
-            else
-                entries+="$system - $name\n"
-            fi
+            icon="$ICON_DIR/$base.avif"
+            entries+="$system - $name\0icon\x1f$icon\n"
         done
     done
 done
