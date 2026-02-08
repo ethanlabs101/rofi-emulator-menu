@@ -1,0 +1,98 @@
+#!/bin/bash
+
+# Retro systems: folder and emulator
+declare -A SYSTEMS
+SYSTEMS=(
+    ["SNES"]="$HOME/Games/SNES:snes9x:sfc,smc"
+    ["NES"]="$HOME/Games/NES:fceux:nes"
+    ["DS"]="$HOME/Games/DS:desmume:nds"
+    ["GBA"]="$HOME/Games/GBA:flatpak run io.mgba.mGBA:gba"
+    ["GBC"]="$HOME/Games/GBC:flatpak run io.mgba.mGBA:gbc"
+    ["GB"]="$HOME/Games/GB:flatpak run io.mgba.mGBA:gb"
+    ["GENESIS"]="$HOME/Games/GENESIS:retroarch -L /usr/lib/libretro/genesis_plus_gx_libretro.so:gen,bin,md"
+    ["SMS"]="$HOME/Games/MASTER:retroarch -L /usr/lib/libretro/genesis_plus_gx_libretro.so:sms"
+    ["GAMEGEAR"]="$HOME/Games/GAMEGEAR:retroarch -L /usr/lib/libretro/genesis_plus_gx_libretro.so:gg"
+    ["SG-1000"]="$HOME/Games/SG-1000:retroarch -L /usr/lib/libretro/genesis_plus_gx_libretro.so:sg"
+    ["SEGA-CD"]="$HOME/Games/SEGACD:retroarch -L /usr/lib/libretro/picodrive_libretro.so:cue,iso"
+    ["SEGA-32X"]="$HOME/Games/SEGA32X:retroarch -L /usr/lib/libretro/picodrive_libretro.so:32x,bin"
+    ["SATURN"]="$HOME/Games/SATURN:retroarch -L /usr/lib/libretro/yabause_libretro.so:cue,iso"
+    ["DREAMCAST"]="$HOME/Games/DREAMCAST:retroarch -L /usr/lib/libretro/flycast_libretro.so:cue,iso"
+    ["PS1"]="$HOME/Games/PS1:retroarch -L /usr/lib/libretro/mednafen_psx_libretro.so:cue,iso"
+    ["N64"]="$HOME/Games/N64:retroarch -L /usr/lib/libretro/parallel_n64_libretro.so:n64,z64,v64"
+    ["INTEL"]="$HOME/Games/INTELLIVISION:retroarch -L /usr/lib/libretro/freeintv_libretro.so:int,rom,bin"
+    ["COLECO"]="$HOME/Games/COLECOVISION:retroarch -L /usr/lib/libretro/bluemsx_libretro.so:col,bin,rom"
+    ["NEOGEOPOCKET"]="$HOME/Games/NEOGEOPOCKET:retroarch -L /usr/lib/libretro/mednafen_ngp_libretro.so:ngc,ngp,zip"
+    ["NEOGEO"]="$HOME/Games/NEOGEO:retroarch -L /usr/lib/libretro/fbneo_libretro.so:chd,zip"
+    ["POKEMINI"]="$HOME/Games/POKEMINI:retroarch -L /usr/lib/libretro/pokemini_libretro.so:pmm,min"
+    ["WONDERSWAN"]="$HOME/Games/WONDERSWAN:retroarch -L /usr/lib/libretro/mednafen_wswan_libretro.so:ws,wsc,zip"
+    ["TURBOGRAFX"]="$HOME/Games/TURBOGRAFX:retroarch -L /usr/lib/libretro/mednafen_pce_libretro.so:pce,vpc,cue"
+    ["CD-I"]="$HOME/Games/CD-I:retroarch -L /usr/lib/libretro/same_cdi_libretro.so:cue"
+    ["AMSTRADCPC"]="$HOME/Games/AMSTRAD-CPC:retroarch -L /usr/lib/libretro/cap32_libretro.so:dsk,cdt"
+    ["NEOGEOMVS"]="$HOME/Games/NEOGEOMVS:retroarch -L /usr/lib/libretro/fbneo_libretro.so:zip"
+    ["ATARI2600"]="$HOME/Games/ATARI2600:retroarch -L /usr/lib/libretro/stella_libretro.so:a26"
+    ["ATARI5200"]="$HOME/Games/ATARI5200:retroarch -L /usr/lib/libretro/a5200_libretro.so:a52"
+    ["ATARI7800"]="$HOME/Games/ATARI7800:retroarch -L /usr/lib/libretro/prosystem_libretro.so:bin,rom"
+    ["LYNX"]="$HOME/Games/ATARI-LYNX:retroarch -L /usr/lib/libretro/handy_libretro.so:lyx"    
+    ["JAGUAR"]="$HOME/Games/ATARI-JAGUAR:retroarch -L /usr/lib/libretro/virtualjaguar_libretro.so:j64"
+    ["JAGUAR-CD"]="$HOME/Games/ATARI-JAGUAR-CD:retroarch -L /usr/lib/libretro/virtualjaguar_libretro.so:cue"
+    ["VB"]="$HOME/Games/VIRTUALBOY:retroarch -L /usr/lib/libretro/mednafen_vb_libretro.so:vb"
+    ["COM64"]="$HOME/Games/COMMODORE-64:retroarch -L /usr/lib/libretro/vice_x64_libretro.so:d64,tap,prg"
+)
+
+# Icon folder
+ICON_DIR="$HOME/.cache/rofi-game-icons"
+
+entries=""
+
+# Supported icon extensions (priority order)
+ICON_EXTS=(avif png jpeg jpg)
+
+# Build entries for all systems
+for system in "${!SYSTEMS[@]}"; do
+    IFS=":" read -r rom_dir emulator exts <<< "${SYSTEMS[$system]}"
+    for ext in ${exts//,/ }; do
+        for rom in "$rom_dir"/*.$ext; do
+            [ -e "$rom" ] || continue
+
+            name=$(basename "$rom")
+            base="${name%.*}"
+
+            # Find first matching icon
+            icon=""
+            for iext in "${ICON_EXTS[@]}"; do
+                if [[ -f "$ICON_DIR/$base.$iext" ]]; then
+                    icon="$ICON_DIR/$base.$iext"
+                    break
+                fi
+            done
+
+            # Add entry (icon optional)
+            if [[ -n "$icon" ]]; then
+                entries+="$system - $name\0icon\x1f$icon\n"
+            else
+                entries+="$system - $name\n"
+            fi
+        done
+    done
+done
+
+# Launches custom theme
+ROFI_THEME="${ROFI_THEME:-/$HOME/.config/rofi/game-theme/ethanlabs101.rasi}"
+
+# Show unified menu
+selected=$(printf "%b" "$entries" | rofi -dmenu -theme "$ROFI_THEME" -p "Retro Games" -show-icons)
+[ -z "$selected" ] && exit
+
+# Parse system and game name
+system_name="${selected%% - *}"
+game_name="${selected#* - }"
+
+# Find full ROM path
+IFS=":" read -r rom_dir emulator exts <<< "${SYSTEMS[$system_name]}"
+for ext in ${exts//,/ }; do
+    for rom in "$rom_dir"/*.$ext; do
+        if [[ "$(basename "$rom")" == "$game_name" ]]; then
+            exec $emulator "$rom"
+        fi
+    done
+done
