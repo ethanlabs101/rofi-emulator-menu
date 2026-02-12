@@ -334,7 +334,7 @@ RetroFi uses a specific directory layout.
 ~/.local/bin/retrofi-boxart-refresh.sh
 
 ### Console ROM Structure
-~/Games/<console>/
+~/Games/{console}/{roms}
 
 ### Favorites List (Populated by retro-favorites-update.sh)
 ~/.local/share/retro-games/favorites/
