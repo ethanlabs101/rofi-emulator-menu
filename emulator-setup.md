@@ -1,1 +1,1 @@
-# Emulators / Cores Setup Guide
+# 🕹️ Emulators / Cores Setup Guide
