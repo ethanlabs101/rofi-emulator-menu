@@ -246,16 +246,17 @@ Some systems use:
 
 - 8a. ROMs
 
- --This launcher expects games to be stored in the ~/Games directory with a correctly named sub-folder for each system. 
- --Use the provided Game and console sub folders and add your roms to the correct folder.
- -- Example: ~/Games/DS holds all the .nds Nintendo DS ROMs
+ - -This launcher expects games to be stored in the ~/Games directory with a correctly named sub-folder for each system. 
+ - -Use the provided Game and console sub folders and add your roms to the correct folder.
+ - - Example: ~/Games/DS holds all the .nds Nintendo DS ROMs
 
 - 8b. Box art
 
-Box art images go in
+Box art images go in:
+
 `~/Pictures/retro-games`
 
-Then run the boxart uploader script  :
+Then run the boxart uploader script:
 
 ```html
 ./retrofi-boxart-refresh.sh
