@@ -1,10 +1,5 @@
 # Retro-Fi 🎮 (Rofi + Retro Gaming Platform Launcher)
 
- <span style="-webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background: linear-gradient(200deg, #42d392, #647eff);">Retro-Fi</span>
-
-
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
