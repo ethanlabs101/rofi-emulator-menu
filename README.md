@@ -63,7 +63,7 @@ To run Retro-Fi, your system should have the following installed:
 - Bash – version 5.x recommended  
 - Rofi – for the graphical menu interface  
 - Flatpak – for certain emulators and runtime support
-- Flathub - via flatapk to be able to install emulators
+- Flathub - via flatpak to be able to install emulators
 - RetroArch – for multi-system emulation support  
 
 ### Optional / System Emulators
