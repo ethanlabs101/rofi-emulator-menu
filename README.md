@@ -6,7 +6,6 @@
 [![Stars](https://img.shields.io/github/stars/ethanlabs101/rofi-emulator-menu?style=social)](https://github.com/ethanlabs101/rofi-emulator-menu/stargazers)
 
 ---
-<div><span style="color: #df6654">R</span><span style="color: #dd5959">e</span><span style="color: #dc4b5e">t</span><span style="color: #da3e63">r</span><span style="color: #d83068">o</span><span style="color: #cc3f6d">-</span><span style="color: #c14d73">F</span><span style="color: #b55c78">i</span></div>
 
 Retro-Fi is a lightweight, fully-featured retro gaming launcher for Linux.
 Manage your favorites, launch games across 30+ emulators, customize themes, and refresh box art - all from a sleek, native Linux, Rofi-powered interface.
