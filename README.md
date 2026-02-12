@@ -133,7 +133,7 @@ chmod +x ~/.local/bin/retrofi-boxart-refresh.sh
 
 ## 4. Install core dependencies
 
-## 4a. Download Rofi (Skip to step 4b if downloaded)
+- ## 4a. Download Rofi (Skip to step 4b if downloaded)
 
 - Arch
 
