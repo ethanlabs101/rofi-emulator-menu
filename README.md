@@ -374,6 +374,25 @@ High-end emulation platforms are outside the scope of RetroFi by design.
 
 ---
 
+## Legal Notice ⚖️
+
+RetroFi does not provide:
+
+- BIOS files
+- ROM downloads
+- Direct download links
+- Piracy guidance
+
+Users are responsible for legally obtaining their own:
+
+- Game ROMs
+- Required BIOS files
+- Disc images
+
+This project is a launcher and management interface only.
+
+---
+
 ## 📜 License
 
 This project is open source and released under the MIT License. See [LICENSE](https://github.com/ethanlabs101/rofi-emulator-menu/blob/main/LICENSE) for details.
