@@ -59,6 +59,7 @@ Safe to tweak without affecting other Rofi setups.
 To run Retro-Fi, your system should have the following installed:
 
 ### Core Dependencies
+- Git - to clone this repository
 - Bash – version 5.x recommended  
 - Rofi – for the graphical menu interface  
 - Flatpak – for certain emulators and runtime support  
@@ -84,9 +85,64 @@ To run Retro-Fi, your system should have the following installed:
 
 ---
 
-## Installation ⚡
+# Installation ⚡
 
 ---
+
+## 1. Clone this repository directly to your home directory
+
+```html
+git clone https://github.com/ethanlabs101/Retro-Fi.git ~
+```
+
+> ⚠️ Retro-Fi expects the directory structure to match ~/Games/<Console> for full functionality.
+
+## 2. Make scripts executable
+
+```html
+chmod +x ~/.local/bin/retro-games
+chmod +x ~/.local/bin/run-theme-editor.sh
+chmod +x ~/.local/bin/rofi-theme-manager.sh
+chmod +x ~/.local/bin/run-favorites-update.sh
+chmod +x ~/.local/share/retro-games/favorites/retro-favorites-update.sh
+chmod +x ~/.local/bin/retrofi-boxart-refresh.sh
+```
+
+## 3. Install core dependencies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 1. Download Rofi (Skip to step 2 if downloaded)
 
