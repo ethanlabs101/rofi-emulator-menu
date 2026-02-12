@@ -309,8 +309,8 @@ RetroFi ships modular. Each component can be customized independently.
 Interactive helper script that allows:
 - Background switching
 - Text color adjustments
-- Layout tweaks
-- Custom Rofi styling changes
+- Custom Fonts
+- Italics / Bold text modifier
 
 Does not modify your global Rofi configuration.
 
