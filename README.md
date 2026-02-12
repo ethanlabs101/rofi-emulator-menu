@@ -301,6 +301,36 @@ retro-games
 
 ---
 
+## File Structure & Locations 📂
+
+RetroFi uses a specific directory layout.
+
+### Core Scripts
+~/.local/bin/retro-games  
+~/.local/share/retro-games/favorites/retro-favorites-update.sh  
+~/.local/bin/rofi-theme-manager.sh  
+~/.local/bin/retrofi-boxart-refresh.sh
+
+### Console ROM Structure
+~/Games/<console>/
+
+### Favorites List (Populated by retro-favorites-update.sh)
+~/.local/share/retro-games/favorites/
+
+### Boxart Source
+~/Pictures/retro-games/
+
+### Boxart Cache
+~/.cache/rofi-game-icons/
+
+### Rofi Theme
+~/.config/rofi/game-theme/retro-fi.rasi
+
+### Backgrounds & System Icons
+/usr/share/rofi/themes/retro-fi-backgrounds/
+
+---
+
 ## Favorites & Recently Played 📌
 
 Favorites and Recently Played are supported for most disc-based and cartridge systems.
