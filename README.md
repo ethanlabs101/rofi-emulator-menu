@@ -301,6 +301,27 @@ retro-games
 
 ---
 
+## Favorites & Recently Played 📌
+
+Favorites and Recently Played are supported for most disc-based and cartridge systems.
+
+However, behavior may vary depending on:
+
+- Emulator used
+- Core configuration
+- Save file location
+- Flatpak vs native install
+
+Some systems have limitations.
+
+➡️ Full compatibility breakdown:  
+[View Favorites Compatibility →](./docs/FAVORITES_COMPATIBILITY.md)
+
+➡️ Recently Played behavior details:  
+[View Recently Played Info →](./docs/RECENTLY_PLAYED.md)
+
+---
+
 ## Modifications & Customization 🎨
 
 RetroFi ships modular. Each component can be customized independently.
