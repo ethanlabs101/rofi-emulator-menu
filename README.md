@@ -231,51 +231,15 @@ source ~/.zshrc
 ```
 ---
 
-7. Install Emulators
+## 7. Install Emulators
 
-This rofi emulator menu supports multiple emulators. They must be installed in the specified ways to work properly.
-
-- Arch
-
-```html
-sudo pacman -S snes9x fceux desmume retroarch
-```
-
-```html
-sudo pacman -S libretro-genesis-plus-gx
-```
-
-```html
-flatpak install flathub io.mgba.mGBA
-```
-
-- Debian / Ubuntu
-
-```html
-sudo apt install snes9x fceux desmume retroarch
-```
-
-```html
-sudo apt install libretro-genesis
-```
-
-```html
-flatpak install flathub io.mgba.mGBA
-```
-
-- Fedora
-
-```html
-sudo dnf install snes9x fceux desmume retroarch
-```
-
-```html
-sudo dnf install libretro-genesis-plus-gx
-```
-
-```html
-flatpak install flathub io.mgba.mGBA
-```
+Retro-Fi does not automatically install emulators or cores.
+Some systems use:
+- Native package manager installs (pacman / dnf /apt)
+- Flatpak (via Flathub)
+- RetroArch cores (terminal or manual buildbot install)
+➡️ See the full setup guide here:
+[Emulator Setup Guide]
 
 ---
 
