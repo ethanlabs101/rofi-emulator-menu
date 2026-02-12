@@ -264,11 +264,9 @@ Then run the boxart uploader script:
 
 Alternatively, you can launch the script inside the Rofi menu by selecting the Upload Boxart option.
 
-> The supported formats are .avif, .png, .jpeg, and .jpg
-
-> Boxart names much match the game name exactly minus extension.
-
-> (ex. MarioKartDS.nds MarioKartDS.png)
+- The supported formats are .avif, .png, .jpeg, and .jpg
+- Boxart names much match the game name exactly minus extension.
+- (ex. MarioKartDS.nds MarioKartDS.png)
 
 ---
 
