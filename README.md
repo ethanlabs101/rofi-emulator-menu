@@ -246,8 +246,8 @@ Some systems use:
 
 - 8a. ROMs
 
-   -This launcher expects games to be stored in the ~/Games directory with a correctly named sub-folder for each system. 
-   -Use the provided Game and console sub folders and add your roms to the correct folder.
+   - This launcher expects games to be stored in the ~/Games directory with a correctly named sub-folder for each system. 
+   - Use the provided Game and console sub folders and add your roms to the correct folder.
    - Example: ~/Games/DS holds all the .nds Nintendo DS ROMs
 
 - 8b. Box art
