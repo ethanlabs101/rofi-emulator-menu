@@ -351,6 +351,29 @@ Supports:
 
 ---
 
+## Platform Scope 🚫
+
+RetroFi intentionally supports systems up to:
+
+- PlayStation 2
+- GameCube / Wii
+- PSP
+- Original Xbox
+- Nintendo 3DS
+
+### ❌ Not Supported (and will not be added)
+
+- PlayStation 3
+- Xbox 360
+- Nintendo Switch
+- Modern-generation consoles
+
+This project focuses on lightweight, efficient retro and early 3D systems.
+
+High-end emulation platforms are outside the scope of RetroFi by design.
+
+---
+
 ## 📜 License
 
 This project is open source and released under the MIT License. See [LICENSE](https://github.com/ethanlabs101/rofi-emulator-menu/blob/main/LICENSE) for details.
