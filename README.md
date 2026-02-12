@@ -115,7 +115,7 @@ sudo dnf install git
 git clone https://github.com/ethanlabs101/Retro-Fi.git ~
 ```
 
-> ⚠️ Retro-Fi expects the directory structure to match ~/Games/<Console> for full functionality.
+> ⚠️ Retro-Fi expects the directory structure to match ~/Games/Console for full functionality.
 
 ---
 
@@ -190,29 +190,7 @@ sudo dnf install rofi
 
 
 
-1. Download Rofi (Skip to step 2 if downloaded)
 
-Arch
-
-```html
-sudo pacman -S rofi
-```
-
-Debian/Ubuntu
-
-```html
-sudo apt install rofi
-```
-
-Fedora 
-
-```html
-sudo dnf install rofi
-```
-
-> Note: If your rofi build does not support icons box art will not show, please download the most recent version for best user experience.
-
----
 
 2. Install the launcher script
 
