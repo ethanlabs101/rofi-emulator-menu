@@ -270,7 +270,7 @@ Alternatively, you can launch the script inside the Rofi menu by selecting the U
 
 ---
 
-9. First Launch and Testing
+## 9. First Launch and Testing
 
 Once all steps have been followed thoroughly run the command:
 
@@ -291,7 +291,7 @@ retro-games
  
 ---
 
-Troubleshooting
+## Troubleshooting
 
 - Menu appears empty: Check that your ~/Games directory exists and contains correct folders and ROMs
 - Icons missing: make sure box art images are in ~/.cache/rofi-game-icons and named exactly like ROM file (Minus game extension)
@@ -303,50 +303,6 @@ Troubleshooting
 
 ## Modification & Customization
 
-Change the background
-1. download new desired background image and rename it to ethanlabs101.png
-2. next, delete old ethanlabs.png image use:
-
-```html
-sudo rm -f /usr/share/rofi/themes/ethanlabs101.png
-```
-3. now copy new image to directory
-
-```html
-sudo cp -r ethanlabs101.png /usr/share/rofi/themes/
-```
-> Background Customization Complete!
-
----
-
-Add new emulators
-
-1. Install new emulator
-2. Open launcher script
-
-```html
-nano ~/.local/bin/retro-games
-```
-
-3. Add a new entry to the SYSTEMS array with:
-- System name
-- ROM/Game path
-- Emulator name
-- Supported file extensions
-
-Example:
-- Current: ["NES"]="$HOME/Games/NES:fceux:nes"
-- New: ["3DS"]="$HOME/Games/3DS:citra:3ds"
-
-4. Save and exit
-
----
-
-Change text color
-1. Open ethanlabs101.rasi theme file
-2. Edit line 12 where it says text-color: #00FEFC;
-3. Replace with color names (example: red) or hex color codes (example: #ff0000)
-4. Save and Exit
 
 ---
 
