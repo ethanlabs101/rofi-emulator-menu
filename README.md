@@ -1,16 +1,5 @@
 # Retro-Fi 🎮 (Rofi + Retro Gaming Platform Launcher)
 
-<style>
-.gradient-text {
-  background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 2em;
-  font-weight: bold;
-}
-</style>
-
-<h1 class="gradient-text">Retro-Fi</h1>   
 
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
 
