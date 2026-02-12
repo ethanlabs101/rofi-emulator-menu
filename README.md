@@ -301,6 +301,28 @@ retro-games
 
 ---
 
+## Multi-Disc Titles 🎮💿
+
+RetroFi currently does not support automatic multi-disc management.
+
+Systems affected may include:
+
+- PlayStation 1
+- Sega CD
+- Saturn
+- Dreamcast
+- PlayStation 2
+- Atari Jaguar CD
+- CD-i
+
+For multi-disc titles, it is recommended to launch and manage disc swapping directly inside your emulator.
+
+This is intentional to keep RetroFi lightweight, modular, and stable.
+
+Multi-disc support may be considered in the future if there is demand.
+
+---
+
 ## File Structure & Locations 📂
 
 RetroFi uses a specific directory layout.
