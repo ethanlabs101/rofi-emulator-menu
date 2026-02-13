@@ -2,7 +2,7 @@
 
 Retro-Fi allows you to save and launch your favorite games quickly through the favorites system.
 
-✅ Supported Consoles
+## ✅ Supported Consoles
 
 The following consoles fully support favorites functionality:
  - SNES
@@ -20,7 +20,7 @@ The following consoles fully support favorites functionality:
 
 ---
 
-⚠️ Unsupported Consoles
+## ⚠️ Unsupported Consoles
 
 - Favorites are currently unsupported for other systems (e.g., PlayStation 1, N64, Saturn, Dreamcast, Atari, etc.) because they rely on RetroArch cores or Flatpak-installed emulators.
 
@@ -28,9 +28,10 @@ The following consoles fully support favorites functionality:
 
 ---
 
-💡 Notes
+## 💡 Notes
  • Adding favorites for supported systems automatically creates symlinks in your favorites directory.
  • Recently played games follow the same restrictions.
  • Future updates may expand support to additional emulators and RetroArch cores.
 
  ---
+
