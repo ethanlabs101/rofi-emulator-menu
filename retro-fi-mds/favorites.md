@@ -1,4 +1,4 @@
-# Favorites Menu & Compatibility
+# Favorites Menu & Compatibility ⭐
 
 Retro-Fi allows you to save and launch your favorite games quickly through the favorites system.
 
