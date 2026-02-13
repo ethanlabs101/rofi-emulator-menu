@@ -2,6 +2,8 @@
 
 Adds or replaces game artwork.
 
+![Boxart-uploader](https://github.com/ethanlabs101/Retro-Fi/blob/main/retrofi-git-screenshots/boxart-refresh1.png)
+
 ## Supported Formats
 - PNG
 - JPG
@@ -15,5 +17,9 @@ Adds or replaces game artwork.
 3. Choose Refresh
 4. Exit
 
+![Boxart-uploader](https://github.com/ethanlabs101/Retro-Fi/blob/main/retrofi-git-screenshots/boxart-refresh2.png)
+
 ---
+
+## Links
 
