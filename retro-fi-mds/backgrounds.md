@@ -1,7 +1,7 @@
 # 🖼 Included Backgrounds
 
-Retro-Fi ships with curated backgrounds optimized for performance
-and readability.
+Retro-Fi ships with curated backgrounds optimized for asthetics
+and readability. Check out the examples below, or import your own.
 
 ---
 
