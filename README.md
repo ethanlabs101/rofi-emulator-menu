@@ -10,6 +10,13 @@
 
 ---
 
+#    __________        __                         ___________.__ 
+#    \______   \ _____/  |________  ____          \_   _____/|__|
+#     |       _// __ \   __\_  __ \/  _ \   ______ |    __)  |  |
+#     |    |   \  ___/|  |  |  | \(  <_> ) /_____/ |     \   |  |
+#     |____|_  /\___  >__|  |__|   \____/          \___  /   |__|
+#            \/     \/                                 \/        
+
 ## Retro-Fi is a lightweight, fully-featured retro gaming launcher for Linux.
 ## Manage your favorites, launch games across 35+ Retro Systems, customize themes, and refresh box art - all from a sleek, native Linux, Rofi-powered interface.
 ## 🎉 Launched 2/13/2026 - Clone ⇨ Setup ⇨ Play
