@@ -61,7 +61,18 @@ Follow the instructions carefully to get the cores, BIOS, and emulators set up p
 ---
 
 ## SNES
-<!-- Fill in installation instructions here -->
+- Emulator - Snes9x
+- BIOS - NO
+- Favorites Supported? - YES
+- Notes: Installed locally via package manager
+- ROM Extensions: sfc, smc, zip
+
+Arch Installation
+ 
+```html
+sudo pacman -S snes9x
+```
+> Note: Commands are tested on Arch Linux. If you are on another distribution, please use your package manager.
 
 ## NES
 <!-- Fill in installation instructions here -->
