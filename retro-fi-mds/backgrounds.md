@@ -10,7 +10,7 @@ and readability. Check out the examples below, or import your own.
 <details>
 <summary><b><code>Controller</code></b></summary>
 
-|Type 1|
+|Controller.png|
 |--|
 |![img](https://github.com/ethanlabs101/Retro-Fi/blob/main/retro-fi-backgrounds/Controller.png)|
 
