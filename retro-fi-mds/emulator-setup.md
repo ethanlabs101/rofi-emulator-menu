@@ -730,3 +730,7 @@ flatpak install flathub org.citra_emu.citra
 > Note: Commands are tested on Arch Linux. If you are on another distribution, please use your package manager.
 
 ---
+
+## 🔗 Links  
+- [Main README](https://github.com/ethanlabs101/Retro-Fi/tree/main) – go back to the main page.  
+- [Emulator Setup](https://github.com/ethanlabs101/Retro-Fi/blob/main/retro-fi-mds/emulator-setup.md) – detailed instructions for each system, cores, and emulator installation.
