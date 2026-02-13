@@ -684,10 +684,49 @@ flatpak install flathub org.ppsspp.PPSSPP
 ---
 
 ## GameCube
-<!-- Fill in installation instructions here -->
+- Emulator - dolphin
+- BIOS - Optional
+- Favorites Supported? - YES
+- Notes: Installed locally via package manager
+- ROM Extensions: iso, ciso, nkit.iso, rvz, zip
+
+Arch Installation
+ 
+```html
+sudo pacman -S dolphin-emu
+```
+> Note: Commands are tested on Arch Linux. If you are on another distribution, please use your package manager.
+
+---
 
 ## Nintendo Wii
-<!-- Fill in installation instructions here -->
+- Emulator - dolphin
+- BIOS - Optional
+- Favorites Supported? - YES
+- Notes: Installed locally via package manager
+- ROM Extensions: iso, wbfs, rvz, zip
+
+Arch Installation
+ 
+```html
+sudo pacman -S dolphin-emu
+```
+> Note: Commands are tested on Arch Linux. If you are on another distribution, please use your package manager.
+
+---
 
 ## Nintendo 3DS
-<!-- Fill in installation instructions here -->
+- Emulator - citra
+- BIOS - NO
+- Favorites Supported? - YES
+- Notes: Installed via flatpak/flathub
+- ROM Extensions: 3ds, cia, cci, zip
+
+Arch Installation
+ 
+```html
+flatpak install flathub org.citra_emu.citra
+```
+> Note: Commands are tested on Arch Linux. If you are on another distribution, please use your package manager.
+
+---
