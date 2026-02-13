@@ -1,5 +1,7 @@
 # Retro-Fi 🎮 (Rofi + Retro Gaming Platform Launcher)
 
+# Currently finishing up a few modular readme files check back in a few hours when this message is gone and try it out! 
+
 
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
 
