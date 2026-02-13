@@ -1,0 +1,261 @@
+#!/bin/bash
+
+# ---------------- NAV STATE (NEW) ----------------
+NAV_MODE="ROOT"        # ROOT or SYSTEM
+ACTIVE_SYSTEM=""
+
+# Retro systems: folder : emulator : extensions
+declare -A SYSTEMS
+SYSTEMS=(
+    ["SUPER NINTENDO"]="$HOME/Games/SNES:snes9x:sfc,smc,zip"
+    ["NES"]="$HOME/Games/NES:fceux:nes,zip"
+    ["NINTENDO DS"]="$HOME/Games/DS:desmume:nds,zip"
+    ["GAMEBOY ADVANCE"]="$HOME/Games/GBA:flatpak run io.mgba.mGBA:gba,zip"
+    ["GAMEBOY COLOR"]="$HOME/Games/GBC:flatpak run io.mgba.mGBA:gbc,zip"
+    ["NINTENDO GAMEBOY"]="$HOME/Games/GB:flatpak run io.mgba.mGBA:gb,zip"
+    ["SEGA GENESIS"]="$HOME/Games/GENESIS:retroarch -L /usr/lib/libretro/genesis_plus_gx_libretro.so:gen,bin,md,zip"
+    ["SEGA MASTER SYSTEM"]="$HOME/Games/MASTER:retroarch -L /usr/lib/libretro/genesis_plus_gx_libretro.so:sms,zip"
+    ["SEGA GAMEGEAR"]="$HOME/Games/GAMEGEAR:retroarch -L /usr/lib/libretro/genesis_plus_gx_libretro.so:gg,zip"
+    ["SEGA SG-1000"]="$HOME/Games/SG-1000:retroarch -L /usr/lib/libretro/genesis_plus_gx_libretro.so:sg,zip"
+    ["SEGA-CD"]="$HOME/Games/SEGACD:retroarch -L /usr/lib/libretro/picodrive_libretro.so:cue,iso,zip"
+    ["SEGA-32X"]="$HOME/Games/SEGA32X:retroarch -L /usr/lib/libretro/picodrive_libretro.so:32x,bin,zip"
+    ["SEGA SATURN"]="$HOME/Games/SATURN:retroarch -L /usr/lib/libretro/yabause_libretro.so:cue,iso,zip"
+    ["SEGA DREAMCAST"]="$HOME/Games/DREAMCAST:retroarch -L /usr/lib/libretro/flycast_libretro.so:cue,iso,zip"
+    ["PLAYSTATION 1"]="$HOME/Games/PS1:retroarch -L /usr/lib/libretro/mednafen_psx_libretro.so:cue,iso,zip"
+    ["NINTENDO 64"]="$HOME/Games/N64:retroarch -L /usr/lib/libretro/parallel_n64_libretro.so:n64,z64,v64,zip"
+    ["MATTEL INTELLIVISION"]="$HOME/Games/INTELLIVISION:retroarch -L /usr/lib/libretro/freeintv_libretro.so:int,rom,bin,zip"
+    ["COLECOVISION"]="$HOME/Games/COLECOVISION:retroarch -L /usr/lib/libretro/bluemsx_libretro.so:col,bin,rom,zip"
+    ["SNK NEOGEO POCKET"]="$HOME/Games/NEOGEOPOCKET:retroarch -L /usr/lib/libretro/mednafen_ngp_libretro.so:ngc,ngp,zip"
+    ["SNK NEOGEO"]="$HOME/Games/NEOGEO:retroarch -L /usr/lib/libretro/fbneo_libretro.so:chd,zip"
+    ["POKEMON MINI"]="$HOME/Games/POKEMINI:retroarch -L /usr/lib/libretro/pokemini_libretro.so:pmm,min,zip"
+    ["BANDAI WONDERSWAN"]="$HOME/Games/WONDERSWAN:retroarch -L /usr/lib/libretro/mednafen_wswan_libretro.so:ws,wsc,zip"
+    ["TURBOGRAFX-16"]="$HOME/Games/TURBOGRAFX:retroarch -L /usr/lib/libretro/mednafen_pce_libretro.so:pce,vpc,cue,zip"
+    ["CD-I"]="$HOME/Games/CD-I:retroarch -L /usr/lib/libretro/same_cdi_libretro.so:cue,zip"
+    ["AMSTRAD CPC"]="$HOME/Games/AMSTRAD-CPC:retroarch -L /usr/lib/libretro/cap32_libretro.so:dsk,cdt,zip"
+    ["SNK NEOGEO MVS"]="$HOME/Games/NEOGEOMVS:retroarch -L /usr/lib/libretro/fbneo_libretro.so:zip"
+    ["ATARI 2600"]="$HOME/Games/ATARI2600:retroarch -L /usr/lib/libretro/stella_libretro.so:a26,zip"
+    ["ATARI 5200"]="$HOME/Games/ATARI5200:retroarch -L /usr/lib/libretro/a5200_libretro.so:a52,zip"
+    ["ATARI 7800"]="$HOME/Games/ATARI7800:retroarch -L /usr/lib/libretro/prosystem_libretro.so:bin,rom,zip"
+    ["ATARI LYNX"]="$HOME/Games/ATARI-LYNX:retroarch -L /usr/lib/libretro/handy_libretro.so:lyx,zip"
+    ["ATARI JAGUAR"]="$HOME/Games/ATARI-JAGUAR:retroarch -L /usr/lib/libretro/virtualjaguar_libretro.so:j64,zip"
+    ["ATARI JAGUAR-CD"]="$HOME/Games/ATARI-JAGUAR-CD:retroarch -L /usr/lib/libretro/virtualjaguar_libretro.so:cue,zip"
+    ["NINTENDO VIRTUAL BOY"]="$HOME/Games/VIRTUALBOY:retroarch -L /usr/lib/libretro/mednafen_vb_libretro.so:vb,zip"
+    ["COMMODORE 64"]="$HOME/Games/COMMODORE-64:retroarch -L /usr/lib/libretro/vice_x64_libretro.so:d64,tap,prg,zip"
+    ["PLAYSTATION 2"]="$HOME/Games/PS2:flatpak run net.pcsx2.PCSX2:iso,zip"
+    ["XBOX"]="$HOME/Games/XBOX:flatpak run app.xemu.xemu:none"
+    ["PLAYSTATION PORTABLE"]="$HOME/Games/PSP:flatpak run org.ppsspp.PPSSPP:iso,cso,pbp,zip"
+    ["NINTENDO GAMECUBE"]="$HOME/Games/GAMECUBE:dolphin-emu:iso,ciso,nkit.iso,rvz,zip"
+    ["NINTENDO WII"]="$HOME/Games/WII:dolphin-emu:wbfs,iso,rvz,zip"
+    ["NINTENDO 3DS"]="$HOME/Games/3DS:flatpak run org.citra_emu.citra:3ds,cia,cci,zip"
+    ["Theme Editor"]="$HOME:$HOME/.local/bin/run-theme-editor.sh:none"
+    ["Recently Played"]="$HOME/.local/share/retro-games:last_played:none"
+    ["Favorites List"]="$HOME/.local/share/retro-games/favorites:~/.local/share/retro-games/favorites:none,sfc,zip,nds,gba,gbc,gb,nes,iso,ciso,nkit.iso,3ds,cia,cci,zip,cso,pbp,wbfs,rvz,smc"
+    ["Update Favorites"]="$HOME:$HOME/.local/bin/run-favorites-update.sh:none"
+    ["Upload Boxart"]="$HOME:$HOME/.local/bin/retrofi-boxart-refresh.sh:none"
+)
+
+# Explicit order for display
+SYSTEM_ORDER=(
+    "Theme Editor"
+    "Recently Played"
+    "Update Favorites"
+    "Favorites List"
+    "Upload Boxart"
+    "SUPER NINTENDO"
+    "NES"
+    "NINTENDO DS"
+    "GAMEBOY ADVANCE"
+    "GAMEBOY COLOR"
+    "NINTENDO GAMEBOY"
+    "SEGA GENESIS"
+    "SEGA MASTER SYSTEM"
+    "SEGA GAMEGEAR"
+    "SEGA SG-1000"
+    "SEGA-CD"
+    "SEGA-32X"
+    "SEGA SATURN"
+    "SEGA DREAMCAST"
+    "PLAYSTATION 1"
+    "NINTENDO 64"
+    "MATTEL INTELLIVISION"
+    "COLECOVISION"
+    "SNK NEOGEO POCKET"
+    "SNK NEOGEO"
+    "POKEMON MINI"
+    "BANDAI WONDERSWAN"
+    "TURBOGRAFX-16"
+    "CD-I"
+    "AMSTRAD CPC"
+    "SNK NEOGEO MVS"
+    "ATARI 2600"
+    "ATARI 5200"
+    "ATARI 7800"
+    "ATARI LYNX"
+    "ATARI JAGUAR"
+    "ATARI JAGUAR-CD"
+    "NINTENDO VIRTUAL BOY"
+    "COMMODORE 64"
+    "PLAYSTATION 2"
+    "XBOX"
+    "PLAYSTATION PORTABLE"
+    "NINTENDO GAMECUBE"
+    "NINTENDO WII"
+    "NINTENDO 3DS"
+)
+
+ICON_DIR="$HOME/.cache/rofi-game-icons"
+ICON_EXTS=(avif png jpeg jpg)
+
+while true; do
+    entries=""
+
+    # -------- ROOT VIEW --------
+if [[ "$NAV_MODE" == "ROOT" ]]; then
+    for system in "${SYSTEM_ORDER[@]}"; do
+        [[ -z "${SYSTEMS[$system]}" ]] && continue
+
+        IFS=":" read -r rom_dir emulator exts <<< "${SYSTEMS[$system]}"
+
+        [[ "$exts" != "none" && ! -d "$rom_dir" ]] && continue
+
+        icon=""
+        for iext in "${ICON_EXTS[@]}"; do
+            [[ -f "$ICON_DIR/$system.$iext" ]] && icon="$ICON_DIR/$system.$iext" && break
+        done
+
+        if [[ -n "$icon" ]]; then
+            entries+="$system\0icon\x1f$icon"$'\n'
+        else
+            entries+="$system"$'\n'
+        fi
+    done
+fi
+
+# -------- SYSTEM VIEW --------
+if [[ "$NAV_MODE" == "SYSTEM" ]]; then
+    entries+="⟵ Back"$'\n'
+
+    IFS=":" read -r rom_dir emulator exts <<< "${SYSTEMS[$ACTIVE_SYSTEM]}"
+
+    for ext in ${exts//,/ }; do
+        for rom in "$rom_dir"/*.$ext; do
+            [[ -e "$rom" ]] || continue
+
+            name=$(basename "$rom")
+            base="${name%.*}"
+
+            icon=""
+            for iext in "${ICON_EXTS[@]}"; do
+                [[ -f "$ICON_DIR/$base.$iext" ]] && icon="$ICON_DIR/$base.$iext" && break
+            done
+
+            if [[ -n "$icon" ]]; then
+                entries+="$name\0icon\x1f$icon"$'\n'
+            else
+                entries+="$name"$'\n'
+            fi
+        done
+    done
+fi
+
+    ROFI_THEME="${ROFI_THEME:-$HOME/.config/rofi/game-theme/retro-fi.rasi}"
+    selected=$(printf "%b" "$entries" | rofi -dmenu -theme "$ROFI_THEME" -p "Retro Games" -show-icons)
+    [[ -z "$selected" ]] && exit
+
+    # ---- BACK ----
+    [[ "$selected" == "⟵ Back" ]] && NAV_MODE="ROOT" && ACTIVE_SYSTEM="" && continue
+
+    # ---- TOOLS (ROOT ONLY) ----
+    if [[ "$NAV_MODE" == "ROOT" && "$selected" == "XBOX" ]]; then
+        exec flatpak run app.xemu.xemu
+    fi
+
+    if [[ "$NAV_MODE" == "ROOT" && "$selected" == "Theme Editor" ]]; then
+        exec "$HOME/.local/bin/run-theme-editor.sh"
+    fi
+    
+    if [[ "$NAV_MODE" == "ROOT" && "$selected" == "Update Favorites" ]]; then
+        exec  "$HOME/.local/bin/run-favorites-update.sh"
+    fi
+
+    if [[ "$NAV_MODE" == "ROOT" && "$selected" == "Upload Boxart" ]]; then
+        exec  "$HOME/.local/bin/run-boxart-upload.sh"
+    fi
+
+# -------- FAVORITES VIEW --------
+if [[ "$NAV_MODE" == "SYSTEM" && "$ACTIVE_SYSTEM" == "Favorites List" ]]; then
+    entries+="⟵ Back"$'\n'
+
+    FAV_DIR="$HOME/.local/share/retro-games/favorites"
+    shopt -s nullglob
+    for fav in "$FAV_DIR"/*; do
+        [[ -L "$fav" || -f "$fav" ]];  continue
+        entries+="$(basename "$fav")"$'\n'
+    done
+    shopt -u nullglob
+fi
+
+# -------- LAUNCH FAVORITES GAME --------
+if [[ "$NAV_MODE" == "SYSTEM" && "$ACTIVE_SYSTEM" == "Favorites List" ]]; then
+    if [[ "$selected" == "⟵ Back" ]]; then
+        NAV_MODE="ROOT"
+        ACTIVE_SYSTEM=""
+        continue
+    else
+        # Find which system this game belongs to
+        for SYS in "${!SYSTEMS[@]}"; do
+            IFS=":" read -r ROM_DIR EMULATOR EXTS <<< "${SYSTEMS[$SYS]}"
+            [[ "$EXTS" == "none" ]] && continue
+
+            if [[ -f "$FAV_DIR/$selected" && ",$EXTS," == *",${selected##*.},"* ]]; then
+                exec $EMULATOR "$FAV_DIR/$selected"
+            fi
+        done
+    fi
+fi
+
+    # ---- RECENTLY PLAYED ----
+    if [[ "$NAV_MODE" == "ROOT" && "$selected" == "Recently Played" ]]; then
+    LAST="$HOME/.local/share/retro-games/last-played"
+
+    [[ ! -L "$LAST" ]] && exit 0
+
+    GAME="$(readlink -f "$LAST")"
+    EXT="${GAME##*.}"
+
+    for SYS in "${!SYSTEMS[@]}"; do
+        IFS=":" read -r ROM_DIR EMULATOR EXTS <<< "${SYSTEMS[$SYS]}"
+        [[ "$EXTS" == "none" ]] && continue
+
+        if [[ ",$EXTS," == *",$EXT,"* ]]; then
+            exec $EMULATOR "$GAME"
+        fi
+    done
+
+    exit 0
+fi
+
+    # ---- ENTER SYSTEM ----
+    if [[ "$NAV_MODE" == "ROOT" ]]; then
+        NAV_MODE="SYSTEM"
+        ACTIVE_SYSTEM="$selected"
+        continue
+    fi
+
+    # ---- LAUNCH GAME ----
+IFS=":" read -r rom_dir emulator exts <<< "${SYSTEMS[$ACTIVE_SYSTEM]}"
+
+for ext in ${exts//,/ }; do
+    for rom in "$rom_dir"/*.$ext; do
+        [[ -e "$rom" ]] || continue
+
+        if [[ "$(basename "$rom")" == "$selected" ]]; then
+            # Store last played (single-history, symlink-based)
+            mkdir -p "$HOME/.local/share/retro-games"
+            ln -sfn "$rom" "$HOME/.local/share/retro-games/last-played"
+
+            exec $emulator "$rom"
+        fi
+    done
+done
+done
