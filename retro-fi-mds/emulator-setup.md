@@ -174,13 +174,55 @@ sudo pacman -S libretro-genesis-plus-gx
 ---
 
 ## Sega Master System
-<!-- Fill in installation instructions here -->
+- Emulator - RetroArch
+- Core - genesis_plus_gx_libretro.so
+- BIOS - NO
+- Favorites Supported? - NO
+- Notes: Installed locally via package manager
+- ROM Extensions: sms, zip
+
+Arch Installation
+ 
+```html
+sudo pacman -S libretro-genesis-plus-gx
+```
+> Note: Commands are tested on Arch Linux. If you are on another distribution, please use your package manager.
+
+---
 
 ## Sega GameGear
-<!-- Fill in installation instructions here -->
+- Emulator - RetroArch
+- Core - genesis_plus_gx_libretro.so
+- BIOS - NO
+- Favorites Supported? - NO
+- Notes: Installed locally via package manager
+- ROM Extensions: gg, zip
+
+Arch Installation
+ 
+```html
+sudo pacman -S libretro-genesis-plus-gx
+```
+> Note: Commands are tested on Arch Linux. If you are on another distribution, please use your package manager.
+
+---
 
 ## Sega SG-1000
-<!-- Fill in installation instructions here -->
+- Emulator - RetroArch
+- Core - genesis_plus_gx_libretro.so
+- BIOS - NO
+- Favorites Supported? - NO
+- Notes: Installed locally via package manager
+- ROM Extensions: sg, zip
+
+Arch Installation
+ 
+```html
+sudo pacman -S libretro-genesis-plus-gx
+```
+> Note: Commands are tested on Arch Linux. If you are on another distribution, please use your package manager.
+
+---
 
 ## Sega-CD
 <!-- Fill in installation instructions here -->
