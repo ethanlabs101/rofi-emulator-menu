@@ -361,6 +361,10 @@ RetroFi uses a specific directory layout.
 ### Github md files 
 ~/retro-fi-mds
 - (unused in project use rm -rf ~/retro-fi-mds to remove)
+
+### Github Retro-fi screenshots
+~/retrofi-git-screenshots
+- (unused in project use rm -rf ~/retrofi-git-screenshots to remove)
 ---
 
 ## Favorites & Recently Played 📌
