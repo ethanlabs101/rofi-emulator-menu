@@ -5,7 +5,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/ethanlabs101/neowave-lua)
-[![Stars](https://img.shields.io/github/stars/ethanlabs101/Retro-Fi?style=social)](https://github.com/ethanlabs101/Retro-Fi/stargazers)
 
 ---
 
