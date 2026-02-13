@@ -381,7 +381,7 @@ However, behavior may vary depending on:
 Some systems have limitations.
 
 ➡️ Full compatibility breakdown:  
-[View Favorites Compatibility →](./docs/FAVORITES_COMPATIBILITY.md)
+[View Favorites Compatibility →](https://github.com/ethanlabs101/Retro-Fi/blob/main/retro-fi-mds/favorites.md)
 
 ➡️ Recently Played behavior details:  
 [View Recently Played Info →](./docs/RECENTLY_PLAYED.md)
