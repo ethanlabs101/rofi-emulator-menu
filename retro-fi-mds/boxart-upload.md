@@ -21,5 +21,6 @@ Adds or replaces game artwork.
 
 ---
 
-## Links
+🔗 Links  
+- [Main README](https://github.com/ethanlabs101/Retro-Fi/tree/main) – Go back to the main page.
 
