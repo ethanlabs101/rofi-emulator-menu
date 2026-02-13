@@ -75,10 +75,32 @@ sudo pacman -S snes9x
 > Note: Commands are tested on Arch Linux. If you are on another distribution, please use your package manager.
 
 ## NES
-<!-- Fill in installation instructions here -->
+- Emulator - fceux
+- BIOS - NO
+- Favorites Supported? - YES
+- Notes: Installed locally via package manager
+- ROM Extensions: nes, zip
+
+Arch Installation
+ 
+```html
+sudo pacman -S fceux
+```
+> Note: Commands are tested on Arch Linux. If you are on another distribution, please use your package manager.
 
 ## Nintendo DS
-<!-- Fill in installation instructions here -->
+- Emulator - desmume
+- BIOS - NO
+- Favorites Supported? - YES
+- Notes: Installed locally via package manager
+- ROM Extensions: nds, zip
+
+Arch Installation
+ 
+```html
+sudo pacman -S desmume
+```
+> Note: Commands are tested on Arch Linux. If you are on another distribution, please use your package manager.
 
 ## GBA
 <!-- Fill in installation instructions here -->
