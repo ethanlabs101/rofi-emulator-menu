@@ -2,10 +2,11 @@
 
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
 
-[![Version](https://img.shields.io/badge/version-1.1.0-blue)](https://github.com/ethanlabs101/neowave-lua)
-![Linux](https://img.shields.io/badge/platform-Linux-blue)
-![Status](https://img.shields.io/badge/status-active-success)
 ![License](https://img.shields.io/badge/license-MIT-purple)
+![Linux](https://img.shields.io/badge/platform-Linux-red)
+[![Version](https://img.shields.io/badge/version-1.1.0-blue)](https://github.com/ethanlabs101/neowave-lua)
+![Status](https://img.shields.io/badge/status-active-success)
+
 
 ---
 
