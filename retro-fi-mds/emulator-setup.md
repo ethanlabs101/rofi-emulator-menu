@@ -302,10 +302,10 @@ sudo pacman -S libretro-flycast
 
 Installation
 
-- 1. Click the build bot link and find the core named "mednafen_psx_libretro.so"
-- 2. Download and extract the file 
-- 3. Move extracted .so file to /usr/lib/libretro/
-- 4. Done Retro-Fi will handle the rest.
+ 1. Click the build bot link and find the core named "mednafen_psx_libretro.so"
+ 2. Download and extract the file 
+ 3. Move extracted .so file to /usr/lib/libretro/
+ 4. Done Retro-Fi will handle the rest.
 
 ---
 
