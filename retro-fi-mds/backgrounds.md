@@ -1,4 +1,37 @@
-# Backgrounds
+# 🖼 Included Backgrounds
+
+Retro-Fi ships with curated backgrounds optimized for performance
+and readability.
+
+---
+
+## Preview
+
+<details>
+<summary><b><code>Controller</code></b></summary>
+
+|Type 1|
+|--|
+|![img](previews/launchers/type-1.gif)|
+
+</details>
+
+
+
+
+- Minimal Dark
+- Neon Grid
+- Retro Wave
+- Arcade Classic
+
+Import your own backgrounds or try any of the above with the [Theme Editor]() tool.
+
+---
+
+## Links
+
+
+
 
 <details>
 <summary><b><code>Launchers</code></b></summary>
