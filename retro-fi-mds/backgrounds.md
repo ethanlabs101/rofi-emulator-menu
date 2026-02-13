@@ -24,7 +24,7 @@ and readability. Check out the examples below, or import your own.
 - Retro Wave
 - Arcade Classic
 
-Import your own backgrounds or try any of the above with the [Theme Editor]() tool.
+To change your background read the [Theme Editor]() tool md for instructions.
 
 ---
 
