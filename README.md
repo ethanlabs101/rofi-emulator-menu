@@ -450,7 +450,7 @@ Does not modify your global Rofi configuration.
 
 ---
 
-### 🌌 [Backgrounds](./docs/BACKGROUNDS.md)
+### 🌌 [Backgrounds](https://github.com/ethanlabs101/Retro-Fi/blob/main/retro-fi-mds/backgrounds.md)
 RetroFi includes:
 - High-quality stock backgrounds
 - Translucent console PNG system icons
