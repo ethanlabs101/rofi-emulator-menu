@@ -96,7 +96,8 @@ To run Retro-Fi, your system should have the following installed:
 ### Core Dependencies
 - Git - to clone this repository
 - Bash – version 5.x recommended  
-- Rofi – for the graphical menu interface  
+- Rofi – for the graphical menu interface
+- Rsync - used during installation for ease of use
 - Flatpak – for certain emulators and runtime support
 - Flathub - via flatpak to be able to install emulators
 - RetroArch – for multi-system emulation support  
@@ -125,22 +126,22 @@ To run Retro-Fi, your system should have the following installed:
 
 ---
 
-## 1. Install Git (If not already installed - if installed skip to step 2)
+## 1. Install Git + Rsync (If not already installed - if installed skip to step 2)
 
 - Arch
 
 ```html
-sudo pacman -S git
+sudo pacman -S git rsync
 ```
 - Ubuntu/Debian
 
 ```html
-sudo apt update && sudo apt install git
+sudo apt update && sudo apt install git rsync 
 ```
 - Fedora
 
 ```html
-sudo dnf install git
+sudo dnf install git rsync
 ```
 
 ---
@@ -163,13 +164,13 @@ Run the following commands:
 cd ~/retro-fi-tmp
 ```
 ```html
-mv local ~/.local
+rsync -av ~/retro-fi-tmp/local/ ~/.local/
 ```
 ```html
-mv config ~/.config
+rsync -av ~/retro-fi-tmp/config/ ~/.config/
 ```
 ```html
-mv cache ~/.cache
+rsync -av ~/retro-fi-tmp/cache/ ~/.cache/
 ```
 
 ---
@@ -209,22 +210,22 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 ```html
 sudo mkdir -p /usr/share/rofi/themes/
 ```
-- Go to ~
+- Go to ~/retro-fi-tmp
 
 ```html
-cd
+cd ~/retro-fi-tmp
 ```
 
 - Move the main current background
 
 ```html
-sudo cp ~/retro-fi.png /usr/share/rofi/themes/
+sudo cp retro-fi.png /usr/share/rofi/themes/
 ```
 
 - Copy all extra backgrounds
 
 ```html
-sudo cp -r ~/retro-fi-backgrounds /usr/share/rofi/themes
+sudo cp -r retro-fi-backgrounds /usr/share/rofi/themes
 ```
 ---
 
