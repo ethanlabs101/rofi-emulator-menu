@@ -340,6 +340,10 @@ RetroFi uses a specific directory layout.
 ~/.local/bin/rofi-theme-manager.sh  
 ~/.local/bin/retrofi-boxart-refresh.sh
 
+## Helper Scripts
+~/.local/bin/run-boxart-upload.sh
+~/.local/bin/run-favorites-update.sh
+
 ### Console ROM Structure
 ~/Games/{console}/{roms}
 
