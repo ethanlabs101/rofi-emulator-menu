@@ -29,5 +29,5 @@ SNES, NES, Nintendo DS, GBA, GBC, GB, Sega Genesis, Sega Master System, Sega Gam
 ---
 
 🔗 Links  
-- [Main README](README.md) – go back to the main page.  
+- [Main README](https://github.com/ethanlabs101/Retro-Fi/tree/main) – go back to the main page.  
 - [Emulator Setup](https://github.com/ethanlabs101/Retro-Fi/blob/main/emulator-setup.md) – detailed instructions for each system, cores, and emulator installation.
