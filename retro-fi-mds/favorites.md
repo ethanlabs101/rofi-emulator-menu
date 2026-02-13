@@ -37,7 +37,7 @@ The following consoles fully support favorites functionality:
 
 ## 📍 Update Favorites Helper Script
 
-favorite1
+![favorites1](https://github.com/ethanlabs101/Retro-Fi/blob/main/retrofi-git-screenshots/favorites1.png)
 
 - I created a few system tools that are accessible through the rofi menu. Here is the Favorites Menu which has many useful features. This mini-guide will help direct you, its designed to be very user friendly.
 
