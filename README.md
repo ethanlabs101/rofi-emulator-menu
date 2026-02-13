@@ -16,6 +16,9 @@
 
 ---
 
+![ascii](https://github.com/ethanlabs101/Retro-Fi/blob/main/retrofi-git-screenshots/retrofi-ascii-art.png)
+
+
 ![rofi-image1](https://github.com/ethanlabs101/Retro-Fi/blob/main/retrofi-git-screenshots/retro-fi-home.png)
 
 ![rofi-image2](https://github.com/ethanlabs101/Retro-Fi/blob/main/retrofi-git-screenshots/retro-fi-home2.png)
