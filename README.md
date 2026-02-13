@@ -77,6 +77,18 @@ Safe to tweak without affecting other Rofi setups.
 *Minimal dependencies, fully transparent, and modifiable*.
 
 ---
+
+## 📘 Before You Begin
+
+Retro-Fi assumes basic familiarity with Linux, including:
+- opening a terminal
+- copying and pasting commands
+- using sudo
+
+If you are new to Linux, consider reviewing a beginner Linux guide first.
+
+---
+
 ## Requirements & Dependencies ⚙️
 
 To run Retro-Fi, your system should have the following installed:
