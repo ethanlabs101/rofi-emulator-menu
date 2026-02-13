@@ -41,3 +41,5 @@ The following consoles fully support favorites functionality:
 
 - I created a few system tools that are accessible through the rofi menu. Here is the Favorites Menu which has many useful features. This mini-guide will help direct you, its designed to be very user friendly.
 
+- You can launch via the Update Favorites option in the rofi meny, alternatively you can launch it using the command run-favorites-update.sh
+
