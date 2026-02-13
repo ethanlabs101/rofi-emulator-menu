@@ -16,13 +16,77 @@ and readability. Check out the examples below, or import your own.
 
 </details>
 
+<details>
+<summary><b><code>Northern Lights</code></b></summary>
 
+|Northern-Lights.png|
+|--|
+|![img](https://github.com/ethanlabs101/Retro-Fi/blob/main/retro-fi-backgrounds/Northern-Lights.png)|
 
+</details>
 
-- Minimal Dark
-- Neon Grid
-- Retro Wave
-- Arcade Classic
+<details>
+<summary><b><code>Retro-Fi</code></b></summary>
+
+|Retro-Fi.png|
+|--|
+|![img](https://github.com/ethanlabs101/Retro-Fi/blob/main/retro-fi-backgrounds/Retro-Fi.png)|
+
+</details>
+
+<details>
+<summary><b><code>Gengar</code></b></summary>
+
+|Gengar.png|
+|--|
+|![img](https://github.com/ethanlabs101/Retro-Fi/blob/main/retro-fi-backgrounds/Gengar.png)|
+
+</details>
+
+<details>
+<summary><b><code>Pacman</code></b></summary>
+
+|Pacman.png|
+|--|
+|![img](https://github.com/ethanlabs101/Retro-Fi/blob/main/retro-fi-backgrounds/Pacman.png)|
+
+</details>
+
+<details>
+<summary><b><code>Beach</code></b></summary>
+
+|Beach.png|
+|--|
+|![img](https://github.com/ethanlabs101/Retro-Fi/blob/main/retro-fi-backgrounds/Beach.png)|
+
+</details>
+
+<details>
+<summary><b><code>Sakura</code></b></summary>
+
+|Sakura.png|
+|--|
+|![img](https://github.com/ethanlabs101/Retro-Fi/blob/main/retro-fi-backgrounds/Sakura.png)|
+
+</details>
+
+<details>
+<summary><b><code>Anime</code></b></summary>
+
+|Anime.png|
+|--|
+|![img](https://github.com/ethanlabs101/Retro-Fi/blob/main/retro-fi-backgrounds/Anime.png)|
+
+</details>
+
+<details>
+<summary><b><code>Arch</code></b></summary>
+
+|Arch.png|
+|--|
+|![img](https://github.com/ethanlabs101/Retro-Fi/blob/main/retro-fi-backgrounds/Arch.png)|
+
+</details>
 
 To change your background read the [Theme Editor](https://github.com/ethanlabs101/Retro-Fi/blob/main/retro-fi-mds/theme-editor.md) tool md for instructions.
 
