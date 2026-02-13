@@ -9,7 +9,7 @@
 
 ## Retro-Fi is a lightweight, fully-featured retro gaming launcher for Linux.
 ## Manage your favorites, launch games across 35+ Retro Systems, customize themes, and refresh box art - all from a sleek, native Linux, Rofi-powered interface.
-## 🎉 Launched 2/13/2026 - Clone -> Setup -> Play Today!
+## 🎉 Launched 2/13/2026 - Clone ⇨ Setup ⇨ Play Today!
 
 ---
 
