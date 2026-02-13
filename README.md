@@ -359,9 +359,9 @@ RetroFi uses a specific directory layout.
 ### Backgrounds & System Icons
 /usr/share/rofi/themes/retro-fi-backgrounds/
 
-### Github md files (unused in project use rm -rf retro-fi-mds to remove)
+### Github md files 
 ~/retro-fi-mds
-
+- (unused in project use rm -rf ~/retro-fi-mds to remove)
 ---
 
 ## Favorites & Recently Played 📌
