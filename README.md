@@ -55,7 +55,7 @@ Quickly find and launch any title in your library.
 🎨 Custom theme isolated from global Rofi config  
 Safe to tweak without affecting other Rofi setups.  
 
-🪶 Extremely lightweight menu idling around ~33mb Ram!
+🪶 Extremely lightweight menu
 
 💻 Written entirely in pure Bash  
 *Minimal dependencies, fully transparent, and modifiable*.
