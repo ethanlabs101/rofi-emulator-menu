@@ -25,7 +25,7 @@
 ✨ Easy plug-and-play setup  
 Clone directly to ~ and start playing immediately — no complex installation needed.  
 
-🎮 Compatible with 30+ retro consoles  
+🎮 Compatible with 35+ retro consoles  
 Check out the [CONSOLE LIST](https://github.com/ethanlabs101/Retro-Fi/blob/main/retro-fi-mds/console-list.md) for the full supported list.  
 
 ⭐️ Favorites management  
@@ -198,19 +198,6 @@ sudo cp ~/retro-fi.png /usr/share/rofi/themes/
 ```html
 sudo cp -r ~/retro-fi-backgrounds /usr/share/rofi/themes
 ```
-
-- Make directory for rofi theme file
-
-```html
-mkdir ~/.config/rofi/game-theme
-```
-
-- Copy Rofi theme file 
-
-```html
-cp ~/retro-fi.rasi ~/.config/rofi/game-theme
-```
-
 ---
 
 ## 6. Make scripts executable
