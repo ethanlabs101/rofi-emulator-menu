@@ -362,6 +362,9 @@ RetroFi uses a specific directory layout.
 ### Backgrounds & System Icons
 /usr/share/rofi/themes/retro-fi-backgrounds/
 
+### Live Background
+/usr/share/rofi/themes/retro-fi.png
+
 ### Github md files 
 ~/retro-fi-mds
 - (unused in project use rm -rf ~/retro-fi-mds to remove)
